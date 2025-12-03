@@ -33,7 +33,7 @@ body {
     align-items: center;
     min-height: 100vh;
     font-family: "Barlow Semi Condensed", sans-serif;
-    background-color: purple;
+    background-color: var(--grey-100);
 }
 
 
@@ -45,7 +45,7 @@ body {
     grid-template-columns: repeat(4, 20em);
     grid-auto-rows: 10px;
     gap: 25px;
-    border-radius: var(--radius)
+    border-radius: var(--radius);
 }
 
 
@@ -53,14 +53,11 @@ body {
 
 .grid>div:not(.item3) {
     grid-row: span 10;
-    border-radius: var(--radius);
-    background-color: green;
 }
 
 .item3 {
     grid-row: span 20;
     border-radius: var(--radius);
-    background-color: green;
 }
 
 .item1 {
@@ -74,16 +71,55 @@ body {
 }
 
 
+/* BASE ITEM */
+
+.grid>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;
+    border-radius: var(--radius);
+}
+
+
 /* ALIGNEMENTS */
 
-
-/* BASE ITEM */
+.identity {
+    display: flex;
+}
 
 
 /* BACKGROUND */
 
+.item1 {
+    background-color: var(--purple-500);
+}
+
+.item2 {
+    background-color: var(--grey-500);
+}
+
+.item3,
+.item4 {
+    background-color: var(--white);
+}
+
+.item5 {
+    background-color: var(--black);
+}
+
 
 /* TYPOGRAPHY */
 
+.item1,
+.item2,
+.item5 {
+    color: var(--white);
+}
+
 
 /* IMAGES (desktop) */
+
+img {
+    padding-right: 20px;
+}
